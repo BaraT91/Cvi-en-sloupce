@@ -1,7 +1,11 @@
 /* intuitivni box-sizing */
 html {
   box-sizing: border-box;
+  <img srcset="large-img.jpg 800w, middle-img.jpg 640w, small-img.jpg 320w"
+  src="small.jpg"
+  />
 }
+
 *,
 ::after,
 ::before {
@@ -17,17 +21,35 @@ body {
   font-size: 24px;
   text-align: center;
   color: #fff;
+  flex: 1 1 100%;
+
 }
 
 .sloupec:nth-child(1) {
   background-color: #3498db;
 }
+
 .sloupec:nth-child(2) {
   background-color: #e74c3c;
 }
+
 .sloupec:nth-child(3) {
   background-color: #2ecc71;
 }
+
+.kontejner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px;
+}
+
+@media (min-width: 800px) {
+  .sloupec {
+    flex-basis: 267px;
+  }
+}
+
 
 /*
 Nastavte CSS pro třídu .kontejner a .sloupec:
